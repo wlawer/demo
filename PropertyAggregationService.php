@@ -22,7 +22,7 @@ class PropertyService
 
     public function getProperties(): JsonResponse
     {
-        // Cache-Schlüssel konfigurierbar machen (z.B. über Parameter)
+        // Cache-Schlüssel konfigurierbar machen 
         $cacheKey = 'properties_merged';
         $cacheItem = $this->cache->getItem($cacheKey);
 
@@ -30,7 +30,7 @@ class PropertyService
             return new JsonResponse($cacheItem->get());
         }
 
-        // Datenquellen konfigurierbar machen (z.B. über services.yaml)
+        // Datenquellen konfigurierbar machen 
         $source1 = $this->loadData('source1.json');
         $source2 = $this->loadData('source2.json');
 
@@ -52,7 +52,7 @@ class PropertyService
         $filePath = $this->dataDirectory . $filename;
 
         if (!file_exists($filePath)) {
-            // Spezifischeren Fehlercode verwenden (z.B. 404)
+            //  Fehlercode verwenden 
             return null;
         }
 
