@@ -1,0 +1,4 @@
+[
+    {"id": 1, "address": "65432 Berlin Test Str. 55", "price": 100000},
+    {"id": 2, "address": "12345 Köln Muster Str. 7", "price": 200000}
+]
